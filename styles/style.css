@@ -16,6 +16,318 @@ html {
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin-left: 0px;
+  margin-right: 0px; */
+}
+
+.content {
+  display: flex;
+  align-items: flex-end;
+  width: 1140px;
+  height: 534px;
+  gap: 30px;
+  /* position: relative; */
+  /* justify-content: flex-start; */
+  /* top: 133px;
+  left: 30px;*/
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 1;
+  align-self: stretch;
+  width: 711px;
+  height: 456px;
+  flex-shrink: 0;
+}
+
+.result__video-container {
+  width: 711px;
+  height: 386px;
+  position: relative;
+  margin-top: 68px;
+  /* display: flex;
+  align-items: center;
+  justify-content: center;*/
+}
+
+.result__video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* position: absolute;
+  top: 0;
+  left: 0; */
+}
+
+.search-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  /*width: 868px; */
+  /* padding-left: 60px; */
+}
+
+.search-form__fieldset {
+  border: none;
+}
+
+.search-form__fieldset-title {
+  font-size: 18px;
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-weight: normal;
+  line-height: 100%;
+  letter-spacing: 0%;
+  padding-bottom: 8px;
+ /* padding-bottom: 10px;
+  padding-left: 2px; */
+}
+
+.search-form__label {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  gap: 10px;
+}
+
+.search-form__label:hover {
+  text-decoration: underline;
+}
+
+.search-form__textfield {
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  border-left: none;
+  border-right: none;
+  background-color: transparent;
+  color: white;
+  appearance: none;
+  width: 225px;
+  height: 25px;
+  font-size: 18px;
+}
+
+.search-form__textfield:has(:focus-visible) {
+  outline:  1px solid white;
+}
+
+.search-form__textfield::placeholder {
+  color: rgb(255 255 255 / 0.7);
+  font-size: 18px;
+  line-height: 100%;
+  font-family: 'Fira Sans Condensed', sans-serif;
+  letter-spacing: 0%;
+}
+
+.search-form__checkbox-list {
+  display: flex;
+  gap: 10px;
+  /* justify-content: flex-start;
+  width: 212px;
+  height: 22px;
+  padding-left: 12px; */
+}
+
+.search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
+  opacity: 1;
+}
+
+.search-form__checkbox:focus + .search-form__pseudo-checkbox {
+  outline: none;
+}
+
+.search-form__checkbox:focus-visible + .search-form__pseudo-checkbox {
+  outline: 1px solid white;
+  outline-offset: 1px;
+} 
+
+.search-form__pseudo-checkbox {
+  border: 1px solid white;
+  width: 19px;
+  height: 19px;
+  padding: 1px;
+}
+
+.search-form__pseudo-checkbox::after {
+  content: '';
+  display: block;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+.content__details {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  flex: 1;
+  align-self: stretch;
+  /* padding-left: 80px;
+  width: 399px;
+  height: 534px; */
+}
+
+.title {
+  margin-top: -10px;
+  font-size: 75px;
+  line-height: 94%;
+  text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
+  font-weight: bold;
+  letter-spacing: 0%;
+  /* width: 265px;
+  height: 210px; */
+}
+
+.content__accent {
+  color: rgba(84, 80, 80, 1);
+}
+
+.content__list-container {
+  height: 298px;
+  overflow-y: scroll;
+  gap: 30px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  /* width: 435px;
+  overflow-x: hidden;
+  margin-top: 35px;
+  position: relative; */
+}
+
+.content__list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.content__list-item {
+  /* padding-left: 3px;
+  padding-right: 3px;
+  display: block; */
+}
+
+.content__card-link {
+  display: block;
+  text-decoration: none; 
+  color: rgba(255, 255, 255, 1);
+}
+
+.content__card-link:active {
+  background-color: rgba(84, 80, 80, 1);
+}
+
+.content__card-link:hover {
+  text-decoration: underline;
+}
+
+.content__card-link:focus-visible {
+  text-decoration: underline;
+}
+
+.content__card-link:focus {
+  outline: none;
+}
+
+.content__card-link:focus-visible {
+  outline: 1px solid white;
+  outline-offset: 4px;
+} 
+
+.content__card-link_current {
+  background-color: rgba(84, 80, 80, 1);
+}
+
+.content__video-card {
+  display: flex;
+  align-items: flex-start;
+}
+
+.content__video-card-description-container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.content__video-card-description {
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+  letter-spacing: 0%;
+  line-height: 16.2px;
+  line-clamp: 3;
+  padding-top: 4px;
+}
+
+.content__video-card-title {
+  font-family: 'Oswald', sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  text-transform: uppercase;
+  line-height: 100%;
+  letter-spacing: 0%;
+  /* padding-bottom: 10px; */
+}
+
+.content__video-card-thumbnail {
+  width: 195px;
+  height: 101px;
+  object-fit: cover;
+  object-position: center;
+  /* object-position: top right;*/
+  /* font-weight: normal;*/
+}
+
+.button {
+  border: 1px solid white;
+  background-color: transparent;
+  color: white;
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.button,
+.content__card-link,
+.search-form__fieldset,
+.search-form__textfieldt {
+  cursor: pointer;
+} 
+
+.button:hover {
+  text-decoration: underline;
+}
+
+.button:active {
+  background-color: rgba(84, 80, 80, 1);
+}
+
+.button:focus {
+  outline: none; 
+}
+
+.button:focus-visible {
+  outline: 1px solid white;
+  outline-offset: 1px;
+}
+
+.search-form__submit-button {
+  width: 193px;
+  height: 31px;
+  margin-top: 18px;
+  /* margin-left: 20px; */
+  align-self: flex-end;
+}
+
+.more-button {
+  width: 100%;
 }
 
 h1,
@@ -37,6 +349,16 @@ ol {
   list-style: none;
 }
 
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
 /* Кастомный скроллбар */
 .custom-scrollbar::-webkit-scrollbar {
   width: 4px;
@@ -49,3 +371,4 @@ ol {
 .custom-scrollbar::-webkit-scrollbar-thumb {
   background-color: #D9D9D9;
 }
+

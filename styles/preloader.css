@@ -1,6 +1,7 @@
 .preloader {
   position: absolute;
   inset: 0;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -33,6 +34,7 @@
 .preloader-chasing-squares .square:nth-child(4) {
   animation-delay: 1.4s;
 }
+
 
 @keyframes focusfade {
   0% {
