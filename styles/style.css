@@ -8,6 +8,25 @@ html {
   block-size: 100%;
 }
 
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+blockquote,
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
 .page {
   inline-size: 1200px;
   block-size: 100%;
@@ -19,20 +38,13 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* margin-left: 0px;
-  margin-right: 0px; */
 }
 
 .content {
   display: flex;
   align-items: flex-end;
   width: 1140px;
-  height: 534px;
   gap: 30px;
-  /* position: relative; */
-  /* justify-content: flex-start; */
-  /* top: 133px;
-  left: 30px;*/
 }
 
 .result {
@@ -42,7 +54,6 @@ html {
   flex: 1;
   align-self: stretch;
   width: 711px;
-  height: 456px;
   flex-shrink: 0;
 }
 
@@ -50,27 +61,20 @@ html {
   width: 711px;
   height: 386px;
   position: relative;
-  margin-top: 68px;
-  /* display: flex;
-  align-items: center;
-  justify-content: center;*/
+  margin-top: 60px;
 }
 
 .result__video {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  /* position: absolute;
-  top: 0;
-  left: 0; */
+  object-position: center;
 }
 
 .search-form {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  /*width: 868px; */
-  /* padding-left: 60px; */
 }
 
 .search-form__fieldset {
@@ -84,8 +88,6 @@ html {
   line-height: 100%;
   letter-spacing: 0%;
   padding-bottom: 8px;
- /* padding-bottom: 10px;
-  padding-left: 2px; */
 }
 
 .search-form__label {
@@ -95,8 +97,8 @@ html {
   gap: 10px;
 }
 
-.search-form__label:hover {
-  text-decoration: underline;
+.search-form__checkbox-list .search-form__label:hover .search-form__label-text { 
+  text-decoration: underline; 
 }
 
 .search-form__textfield {
@@ -127,10 +129,6 @@ html {
 .search-form__checkbox-list {
   display: flex;
   gap: 10px;
-  /* justify-content: flex-start;
-  width: 212px;
-  height: 22px;
-  padding-left: 12px; */
 }
 
 .search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
@@ -141,10 +139,10 @@ html {
   outline: none;
 }
 
-.search-form__checkbox:focus-visible + .search-form__pseudo-checkbox {
+.search-form__label:focus-within {
   outline: 1px solid white;
   outline-offset: 1px;
-} 
+}
 
 .search-form__pseudo-checkbox {
   border: 1px solid white;
@@ -168,21 +166,16 @@ html {
   gap: 26px;
   flex: 1;
   align-self: stretch;
-  /* padding-left: 80px;
-  width: 399px;
-  height: 534px; */
+  margin-top: -19px;
 }
 
 .title {
-  margin-top: -10px;
   font-size: 75px;
   line-height: 94%;
   text-transform: uppercase;
   font-family: 'Oswald', sans-serif;
   font-weight: bold;
   letter-spacing: 0%;
-  /* width: 265px;
-  height: 210px; */
 }
 
 .content__accent {
@@ -196,22 +189,12 @@ html {
   display: flex;
   flex-direction: column;
   position: relative;
-  /* width: 435px;
-  overflow-x: hidden;
-  margin-top: 35px;
-  position: relative; */
 }
 
 .content__list {
   display: flex;
   flex-direction: column;
   gap: 32px;
-}
-
-.content__list-item {
-  /* padding-left: 3px;
-  padding-right: 3px;
-  display: block; */
 }
 
 .content__card-link {
@@ -230,16 +213,13 @@ html {
 
 .content__card-link:focus-visible {
   text-decoration: underline;
+  outline: 1px solid white;
+  outline-offset: 4px;
 }
 
 .content__card-link:focus {
   outline: none;
 }
-
-.content__card-link:focus-visible {
-  outline: 1px solid white;
-  outline-offset: 4px;
-} 
 
 .content__card-link_current {
   background-color: rgba(84, 80, 80, 1);
@@ -273,7 +253,9 @@ html {
   text-transform: uppercase;
   line-height: 100%;
   letter-spacing: 0%;
-  /* padding-bottom: 10px; */
+  text-overflow: ellipsis; 
+  white-space: nowrap; 
+  overflow: hidden;
 }
 
 .content__video-card-thumbnail {
@@ -281,8 +263,6 @@ html {
   height: 101px;
   object-fit: cover;
   object-position: center;
-  /* object-position: top right;*/
-  /* font-weight: normal;*/
 }
 
 .button {
@@ -292,6 +272,7 @@ html {
   font-family: 'Fira Sans Condensed', sans-serif;
   font-weight: bold;
   font-size: 18px;
+  min-height: 31px;
 }
 
 .button,
@@ -320,33 +301,12 @@ html {
 
 .search-form__submit-button {
   width: 193px;
-  height: 31px;
   margin-top: 18px;
-  /* margin-left: 20px; */
   align-self: flex-end;
 }
 
 .more-button {
   width: 100%;
-}
-
-h1,
-h2,
-h3,
-h4,
-p,
-ul,
-ol,
-li,
-blockquote,
-fieldset {
-  margin: 0;
-  padding: 0;
-}
-
-ul,
-ol {
-  list-style: none;
 }
 
 .visually-hidden {
